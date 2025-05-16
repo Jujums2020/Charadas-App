@@ -1,6 +1,4 @@
-
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
 
 const charades = [
   "Lavando los platos con fastidio",
@@ -45,7 +43,7 @@ export default function CharadesApp() {
       <div className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-md">
         <p className="text-xl font-semibold">{charades[index]}</p>
         {status && (
-          <p className={\`mt-4 text-lg font-bold \${status === "correct" ? "text-green-600" : "text-red-500"}\`}>
+          <p className={`mt-4 text-lg font-bold ${status === "correct" ? "text-green-600" : "text-red-500"}`}>
             {status === "correct" ? "¡Correcto!" : "¡Pasaste!"}
           </p>
         )}
